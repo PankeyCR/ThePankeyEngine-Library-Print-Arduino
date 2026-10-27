@@ -16,6 +16,11 @@ namespace pankey{
 					Serial.print(static_cast<char>(byte));
 					return 1;
 				}
+				
+				pankey::Memory::Allocator::memory_size writeInt(int a_data){
+					Serial.print(a_data);
+					return 1;
+				}
 
 				pankey::Memory::Allocator::memory_size writeString(const char* str){
 					if(str == nullptr){
